@@ -1,5 +1,5 @@
 import datetime
-import getpass
+import pwinput
 import math
 
 data_pengguna = {
@@ -9,19 +9,19 @@ data_pengguna = {
 
 data_bayi = {
         "BAYI1": {
-            "nama_bayi": "Chika",
+            "nama_bayi": "Asep",
             "berat_badan": 2.1,
             "kategori_kesehatan": "Kurus",
             "tanggal_pencatatan": "2026-10-01",
         },
         "BAYI2": {
-            "nama_bayi": "Gilbert",
+            "nama_bayi": "Mamat",
             "berat_badan": 3.2,
             "kategori_kesehatan": "Normal",
             "tanggal_pencatatan": "2026-10-02",
         },
         "BAYI3": {
-            "nama_bayi": "Alena",
+            "nama_bayi": "Kiel",
             "berat_badan": 4.3,
             "kategori_kesehatan": "Obesitas atau Gemuk",
             "tanggal_pencatatan": "2026-10-03",
@@ -46,7 +46,7 @@ def sistem_masuk_akun():
 
     nama_pengguna = input("Masukkan Nama Pengguna: ").strip()
     try:
-        kata_sandi = getpass.getpass("Masukkan Kata Sandi: ").strip()
+        kata_sandi = pwinput.pwinput("Masukkan Kata Sandi: ").strip()
     except Exception:
         kata_sandi = input("Masukkan Kata Sandi: ").strip()
     
